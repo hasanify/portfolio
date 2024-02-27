@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Fondest";
+    font-display: block;
+    font-style: normal;
+    font-named-instance: "Regular";
+    src: url("/assets/fonts/Fondest.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "PantonLight";
+    font-display: block;
+    font-style: normal;
+    font-named-instance: "Regular";
+    src: url("/assets/fonts/Panton/PantonLight.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "AvGard";
+    font-display: block;
+    font-style: normal;
+    font-named-instance: "Regular";
+    src: url("/assets/fonts/AVGARDD_2.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "PantonBold";
+    font-display: block;
+    font-style: normal;
+    font-named-instance: "Regular";
+    src: url("/assets/fonts/Panton/PantonBold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter Var";
+    font-weight: 100 900;
+    font-display: block;
+    font-style: normal;
+    font-named-instance: "Regular";
+    src: url("/assets/fonts/Inter/inter-roman.var.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Inter Var";
+    font-weight: 100 900;
+    font-display: block;
+    font-style: italic;
+    font-named-instance: "Italic";
+    src: url("/assets/fonts/Inter/inter-italic.var.woff2") format("woff2");
+  }
+
+  .inter {
+    font-family: "Inter Var", sans-serif;
+  }
+
+  .fondest {
+    font-family: "Fondest", sans-serif;
+  }
+
+  .pantonlight {
+    font-family: "PantonLight", sans-serif;
+  }
+
+  .pantonbold {
+    font-family: "PantonBold", sans-serif;
+  }
+
+  .avgard {
+    font-family: "AvGard", sans-serif;
+  }
+
+  * {
+    @apply box-border p-0 m-0;
+  }
+
+  html {
+    @apply inter font-medium;
+  }
+
+  body {
+    @apply bg-background text-foreground selection:text-background selection:bg-foreground avgard;
+  }
+
+  .highlight {
+    @apply fondest selection:bg-accent selection:text-background font-extrabold text-accent;
+  }
+}
