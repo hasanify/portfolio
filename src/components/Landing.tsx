@@ -10,7 +10,7 @@ const Landing = () => {
           Writing <span className="">good</span> code
         </p>
         <p className="highlight sm:text-2xl lg:text-4xl text-base">
-          only if the paycheck is
+          only if the paycheck is{" "}
           <span className="underline decoration-foreground">equally good!</span>
         </p>
       </div>
