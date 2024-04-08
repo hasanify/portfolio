@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border p-0 m-0 selection:bg-transparent focus:ring-0 focus:outline-none;
+  }
+
+  body {
+    @apply bg-background text-foreground selection:text-background selection:bg-foreground;
+  }
+
+  .highlight {
+    @apply font-extrabold selection:bg-accent selection:text-background text-accent;
+  }
+
+  .menu-item {
+    @apply transition-colors duration-300 ease-in-out text-foreground;
+  }
+
+  .menu-item:hover {
+    @apply underline decoration-foreground underline-offset-4 text-accent;
+  }
+}

@@ -1,4 +1,8 @@
+"use client";
+
+import { pantonBold } from "@/utils/fonts";
 import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
 import { useState } from "react";
 import { MdOutlineClose } from "react-icons/md";
 import { RiMenu3Line } from "react-icons/ri";
@@ -13,9 +17,12 @@ const Header = () => {
   return (
     <header>
       <div className="fixed flex items-center justify-between w-screen h-20 px-4 sm:px-16 selection:bg-accent selection:text-background bg-foreground">
-        <p className=" text-background bg-[url('/favicon.svg')] bg-cover pantonbold uppercase font-extrabold text-base sm:text-2xl">
+        <Link
+          href={"/"}
+          className={` text-background bg-[url('/favicon.svg')] bg-cover uppercase font-extrabold text-base sm:text-2xl ${pantonBold}`}
+        >
           Hasan Ali
-        </p>
+        </Link>
         <button
           className="active:rotate-180 active:scale-105"
           onClick={toggleMenu}
@@ -50,9 +57,9 @@ const Menu = ({
           </button>
 
           <div className="flex flex-col items-center gap-4 text-2xl font-bold">
-            <MenuItem label="About" link="#about" />
-            <MenuItem label="My Work" link="#work" />
-            <MenuItem label="Contact" link="#contact" />
+            <MenuItem toggleMenu={toggleMenu} label="About" link="#about" />
+            <MenuItem toggleMenu={toggleMenu} label="My Work" link="#work" />
+            <MenuItem toggleMenu={toggleMenu} label="Contact" link="#contact" />
           </div>
         </motion.menu>
       )}
@@ -60,11 +67,20 @@ const Menu = ({
   );
 };
 
-const MenuItem = ({ link, label }: { link: string; label: string }) => {
+const MenuItem = ({
+  link,
+  label,
+  toggleMenu,
+}: {
+  link: string;
+  label: string;
+
+  toggleMenu: () => void;
+}) => {
   return (
-    <a href={link} className="uppercase menu-item">
+    <Link onClick={toggleMenu} href={link} className="uppercase menu-item">
       {label}
-    </a>
+    </Link>
   );
 };
 
