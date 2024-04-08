@@ -1,8 +1,8 @@
-import Header from "@/components/Header";
-import "./globals.css";
-
-import { avgard } from "@/utils/fonts";
 import type { Metadata } from "next";
+
+import Header from "@/components/Header";
+import { avgard } from "@/utils/fonts";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Hasan Ali",

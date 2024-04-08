@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 const avgardFont = localFont({
   src: [
     {
-      path: "../../public/assets/fonts/avgard.woff2",
+      path: "./avgard.woff2",
       weight: "400",
       style: "regular",
     },
@@ -16,7 +16,7 @@ const avgardFont = localFont({
 const fondestFont = localFont({
   src: [
     {
-      path: "../../public/assets/fonts/fondest.woff2",
+      path: "./fondest.woff2",
       weight: "400",
       style: "regular",
     },
@@ -29,7 +29,7 @@ const fondestFont = localFont({
 const pantonLightFont = localFont({
   src: [
     {
-      path: "../../public/assets/fonts/panton/light.woff2",
+      path: "./panton/light.woff2",
       weight: "400",
       style: "regular",
     },
@@ -42,7 +42,7 @@ const pantonLightFont = localFont({
 const pantonBoldFont = localFont({
   src: [
     {
-      path: "../../public/assets/fonts/panton/bold.woff2",
+      path: "./panton/bold.woff2",
       weight: "400",
       style: "regular",
     },

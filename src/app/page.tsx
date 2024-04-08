@@ -18,7 +18,7 @@ const Landing = () => {
           <span className="underline decoration-foreground">equally good!</span>
         </p>
       </div>
-      <div className="size-32 lg:size-64 overflow-hidden">
+      <div className="overflow-hidden size-32 lg:size-64">
         {cat?.src ? (
           <Image
             width={cat.width}
@@ -28,6 +28,7 @@ const Landing = () => {
             quality={"100"}
             className="object-cover size-full"
             priority
+            unoptimized
           />
         ) : (
           <div className="size-full bg-foreground/10 animate-pulse" />
