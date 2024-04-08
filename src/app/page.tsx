@@ -1,12 +1,7 @@
-"use client";
-
-import useCats from "@/hooks/useCats";
+import Cat from "@/components/Cat";
 import { fondest, pantonBold } from "@/utils/fonts";
-import Image from "next/image";
 
 const Landing = () => {
-  const cat = useCats();
-
   return (
     <main
       className={`h-[100dvh] p-8 sm:text-4xl lg:text-6xl text-2xl text-center w-screen gap-4 flex justify-center lg:justify-evenly lg:flex-row items-center flex-col ${pantonBold}`}
@@ -18,22 +13,7 @@ const Landing = () => {
           <span className="underline decoration-foreground">equally good!</span>
         </p>
       </div>
-      <div className="overflow-hidden size-32 lg:size-64">
-        {cat?.src ? (
-          <Image
-            width={cat.width}
-            height={cat.height}
-            src={cat.src}
-            alt="cat"
-            quality={"100"}
-            className="object-cover size-full"
-            priority
-            unoptimized
-          />
-        ) : (
-          <div className="size-full bg-foreground/10 animate-pulse" />
-        )}
-      </div>
+      <Cat />
     </main>
   );
 };
